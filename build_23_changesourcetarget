@@ -1,0 +1,145 @@
+Started by user anonymous
+Building in workspace C:\Jenkins\jobs\real\workspace
+Fetching changes from the remote Git repository
+Checking out Revision e1b1e4cb38eb040ec3227c31a91c38e0fc80535b (refs/remotes/origin/master)
+Parsing POMs
+Established TCP socket on 61465
+[workspace] $ "C:\Program Files (x86)\Java\jdk1.7.0_55/bin/java" -Xmx500m -XX:MaxPermSize=100m -cp C:\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven32-agent-1.7.jar;C:\apache-maven\apache-maven-3.3.9\boot\plexus-classworlds-2.5.2.jar;C:\apache-maven\apache-maven-3.3.9/conf/logging jenkins.maven3.agent.Maven32Main C:\apache-maven\apache-maven-3.3.9 C:\Jenkins\war\WEB-INF\lib\remoting-2.56.jar C:\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven32-interceptor-1.7.jar C:\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven3-interceptor-commons-1.7.jar 61465
+<===[JENKINS REMOTING CAPACITY]===>channel started
+Executing Maven:  -B -f C:\Jenkins\jobs\real\workspace\pom.xml clean org.jacoco:jacoco-maven-plugin:prepare-agent install
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building real 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ real ---
+[INFO] Deleting C:\Jenkins\jobs\real\workspace\target
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.7.6.201602180812:prepare-agent (default-cli) @ real ---
+[INFO] argLine set to -javaagent:C:\\path\\to\\local\\repo\\org\\jacoco\\org.jacoco.agent\\0.7.6.201602180812\\org.jacoco.agent-0.7.6.201602180812-runtime.jar=destfile=C:\\Jenkins\\jobs\\real\\workspace\\target\\jacoco.exec
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.7.6.201602180812:prepare-agent (default-prepare-agent) @ real ---
+[INFO] argLine set to -javaagent:C:\\path\\to\\local\\repo\\org\\jacoco\\org.jacoco.agent\\0.7.6.201602180812\\org.jacoco.agent-0.7.6.201602180812-runtime.jar=destfile=C:\\Jenkins\\jobs\\real\\workspace\\target\\jacoco.exec
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ real ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Jenkins\jobs\real\workspace\src\main\resources
+[INFO] skip non existing resourceDirectory C:\Jenkins\jobs\real\workspace\src\main\resources-dev
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ real ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to C:\Jenkins\jobs\real\workspace\target\classes
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 4.435 s
+[INFO] Finished at: 2016-03-31T10:56:03+09:00
+[INFO] Final Memory: 16M/39M
+[INFO] ------------------------------------------------------------------------
+Waiting for Jenkins to finish collecting data
+[JENKINS] Archiving C:\Jenkins\jobs\real\workspace\pom.xml to com.your.dream/real/0.0.1-SNAPSHOT/real-0.0.1-SNAPSHOT.pom
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project real: Fatal error compiling: invalid target release: 1.8 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+[workspace] $ C:\sonar-scanner-2.5.1\bin\sonar-runner.bat -e -Dsonar.host.url=http://localhost:9000 ******** ******** -Dsonar.projectBaseDir=C:\Jenkins\jobs\real\workspace -Dsonar.projectName=sample -Dproject-java.sonar.binaries=target/classes -Dsonar.projectVersion=0.0.1 -Dsonar.projectKey=sample -Dsonar.sources=src
+channel stopped
+C:\sonar-scanner-2.5.1
+INFO: Scanner configuration file: C:\sonar-scanner-2.5.1\conf\sonar-runner.properties
+INFO: Project configuration file: NONE
+INFO: SonarQube Scanner 2.5.1
+INFO: Java 1.7.0_55 Oracle Corporation (32-bit)
+INFO: Windows 8.1 6.3 x86
+INFO: SONAR_RUNNER_OPTS=-Xmx500m  -XX:MaxPermSize=100m
+INFO: Error stacktraces are turned on.
+INFO: User cache: C:\.sonar\cache
+INFO: Load global repositories
+INFO: Load global repositories (done) | time=313ms
+INFO: User cache: C:\.sonar\cache
+INFO: Load plugins index
+INFO: Load plugins index (done) | time=50ms
+INFO: SonarQube server 5.4
+INFO: Default locale: "ko_KR", source code encoding: "UTF-8"
+INFO: Process project properties
+INFO: Load project repositories
+INFO: Load project repositories (done) | time=244ms
+INFO: Apply project exclusions
+INFO: Load quality profiles
+INFO: Load quality profiles (done) | time=84ms
+INFO: Load active rules
+INFO: Load active rules (done) | time=887ms
+INFO: Publish mode
+INFO: -------------  Scan sample
+INFO: Load server rules
+INFO: Load server rules (done) | time=339ms
+INFO: Base dir: C:\Jenkins\jobs\real\workspace
+INFO: Working dir: C:\Jenkins\jobs\real\workspace\.sonar
+INFO: Source paths: src
+INFO: Source encoding: UTF-8, default locale: ko_KR
+INFO: Index files
+INFO: 3 files indexed
+INFO: Quality profile for java: Sonar way
+INFO: JaCoCoSensor: JaCoCo report not found : C:\Jenkins\jobs\real\workspace\target\jacoco.exec
+INFO: JaCoCoItSensor: JaCoCo IT report not found: C:\Jenkins\jobs\real\workspace\target\jacoco-it.exec
+INFO: JaCoCoOverallSensor: JaCoCo reports not found.
+INFO: Sensor JavaSquidSensor
+INFO: Configured Java source version (sonar.java.source): none
+INFO: JavaClasspath initialization...
+INFO: Bytecode of dependencies was not provided for analysis of source files, you might end up with less precise results. Bytecode can be provided using sonar.java.libraries property
+INFO: JavaClasspath initialization done: 0 ms
+INFO: JavaTestClasspath initialization...
+INFO: Bytecode of dependencies was not provided for analysis of test files, you might end up with less precise results. Bytecode can be provided using sonar.java.test.libraries property
+INFO: JavaTestClasspath initialization done: 0 ms
+INFO: Java Main Files AST scan...
+INFO: 3 source files to be analyzed
+INFO: Java Main Files AST scan done: 1014 ms
+INFO: Java bytecode has not been made available to the analyzer. The org.sonar.java.bytecode.visitor.DependenciesVisitor@1f86671, org.sonar.java.checks.unused.UnusedPrivateMethodCheck@f4a444 are disabled.
+INFO: Java Test Files AST scan...
+INFO: 3/3 source files have been analyzed
+INFO: 0 source files to be analyzed
+INFO: Java Test Files AST scan done: 1 ms
+INFO: Sensor JavaSquidSensor (done) | time=2267ms
+INFO: Sensor Lines Sensor
+INFO: 0/0 source files have been analyzed
+INFO: Sensor Lines Sensor (done) | time=3ms
+INFO: Sensor QProfileSensor
+INFO: Sensor QProfileSensor (done) | time=7ms
+INFO: Sensor SurefireSensor
+INFO: parsing C:\Jenkins\jobs\real\workspace\target\surefire-reports
+INFO: Sensor SurefireSensor (done) | time=1ms
+INFO: Sensor JaCoCoSensor
+INFO: No JaCoCo analysis of project coverage can be done since there is no class files.
+INFO: Sensor JaCoCoSensor (done) | time=15ms
+INFO: Sensor JaCoCoItSensor
+INFO: No JaCoCo analysis of project coverage can be done since there is no class files.
+INFO: Sensor JaCoCoItSensor (done) | time=1ms
+INFO: Sensor JaCoCoOverallSensor
+INFO: No JaCoCo analysis of project coverage can be done since there is no class files.
+INFO: Sensor JaCoCoOverallSensor (done) | time=8ms
+INFO: Sensor SCM Sensor
+INFO: SCM provider for this project is: git
+INFO: 3 files to be analyzed
+INFO: 3/3 files analyzed
+INFO: Sensor SCM Sensor (done) | time=610ms
+INFO: Sensor Code Colorizer Sensor
+INFO: Sensor Code Colorizer Sensor (done) | time=2ms
+INFO: Sensor CPD Sensor
+INFO: JavaCpdIndexer is used for java
+INFO: Sensor CPD Sensor (done) | time=33ms
+INFO: Analysis report generated in 148ms, dir size=15 KB
+INFO: Analysis reports compressed in 63ms, zip size=9 KB
+INFO: Analysis report uploaded in 70ms
+INFO: ANALYSIS SUCCESSFUL, you can browse http://localhost:9000/dashboard/index/sample
+INFO: Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+INFO: More about the report processing at http://localhost:9000/api/ce/task?id=AVPKYp8IQHCwY8Ap6TVi
+INFO: ------------------------------------------------------------------------
+INFO: EXECUTION SUCCESS
+INFO: ------------------------------------------------------------------------
+INFO: Total time: 10.545s
+INFO: Final Memory: 43M/108M
+INFO: ------------------------------------------------------------------------
+Finished: FAILURE
