@@ -10,3 +10,5 @@ public class NotTestedClass {
 		return "this is not tested yet.";
 	}
 }
+
+//NEW

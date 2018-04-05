@@ -2,7 +2,7 @@ package com.your.dream.real;
 
 /**
  * Hello world!
- *
+ * Hi
  */
 public class App 
 {
