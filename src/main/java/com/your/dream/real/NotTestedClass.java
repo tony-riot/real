@@ -2,6 +2,7 @@ package com.your.dream.real;
 
 public class NotTestedClass {
 	public NotTestedClass() {
+		throw new UnsupportedOperationException();
 	}
 	
 	@Override
